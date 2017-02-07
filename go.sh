@@ -10,6 +10,22 @@ for i in *.conf; do
     fi
 done
 
+if ! [ -d ~/.vim/templates ]; then
+  mkdir ~/.vim/templates
+fi
+
+for i in templates/*; do
+    src=$(readlink -f $i)
+    dst=~/.vim/$i
+    if [ -f "$dst" ]; then
+        echo "$dst exists. skip."
+    else
+        cmd="ln -s $src $dst"
+        echo $cmd
+        $cmd
+    fi
+done
+
 if [ -d ~/.config/sublime-text-3/Packages/User ]; then
     for i in sublime-text-3/Packages/User/*.*; do
         fname=$(printf %q "$i")

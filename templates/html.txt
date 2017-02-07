@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<style type='text/css'>
+</style>
+<script>
+"use strict";
+
+function RunTest() {
+}
+
+window.addEventListener("DOMContentLoaded", function(ev) {
+  document.getElementById('result').value = 'Hello';
+}, false);
+</script>
+</head>
+<body>
+<button onclick="RunTest()">clickme</button>
+<input id="result" type="text" value="" />
+</body>
+</html>
