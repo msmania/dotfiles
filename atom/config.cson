@@ -6,5 +6,9 @@
     showInvisibles: true
   "exception-reporting":
     userId: "2f2c70d4-6778-46bd-a3f3-b46cebf6ae68"
+  "tree-view": {}
   welcome:
     showOnStartup: false
+".python.source":
+  editor:
+    tabLength: 2
